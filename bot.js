@@ -57,7 +57,7 @@ function fetchTweets() {
 				since_id_current = tweets[0].id_str;
 
 				for (var i = tweets.length - 1; i >= 0; i--) {
-					// console.log(tweets[i].id + " " + tweets[i].text);
+				console.log(tweets[i].id + " " + tweets[i].text);
 					retweet(tweets[i].id_str);
 
 					// sleep for random time between 60 to 120 seconds.
