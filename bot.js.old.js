@@ -11,8 +11,8 @@ Also: https://dev.twitter.com/rest/public/timelines
 */
 
 var since_id_current = 0;
-var search_query = "#internship OR internship filter:links"; 
-var twitter_screen_name = "ifindinternship"; 
+var search_query = "#design AND intern filter:links"; 
+var twitter_screen_name = "internbydesign"; 
 
 //
 // Get the most recent tweet id of the handle and assign to since_id_current
@@ -57,7 +57,7 @@ function fetchTweets() {
 				since_id_current = tweets[0].id_str;
 
 				for (var i = tweets.length - 1; i >= 0; i--) {
-					// console.log(tweets[i].id + " " + tweets[i].text);
+					console.log(tweets[i].id + " " + tweets[i].text);
 					retweet(tweets[i].id_str);
 
 					// sleep for random time between 60 to 120 seconds.
