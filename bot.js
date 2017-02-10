@@ -11,7 +11,7 @@ Also: https://dev.twitter.com/rest/public/timelines
 */
 
 var since_id_current = 0;
-var search_query = "#internship #design filter:links"; 
+var search_query = "#internship design filter:links"; 
 var twitter_screen_name = "internbydesign"; 
 
 //
@@ -40,7 +40,7 @@ function fetchTweets() {
 	var params = {
 		q: search_query,
 		lang: "en", // Process only English tweets
-		count: 5, // Process 5 tweets in a batch
+		count: 3, // Process 5 tweets in a batch
 		since_id: since_id_current
 	}
 
@@ -92,5 +92,5 @@ function retweet(retweet_id) {
 
 find_since_id_current(twitter_screen_name);
 // fetch tweets every 20 minutes
-setInterval(fetchTweets, 1000 * 60 * 5);
+setInterval(fetchTweets, 1000 * 60 * 20);
 // fetchTweets();
