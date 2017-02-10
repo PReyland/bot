@@ -11,7 +11,7 @@ Also: https://dev.twitter.com/rest/public/timelines
 */
 
 var since_id_current = 0;
-var search_query = "#internship AND design filter:links"; 
+var search_query = "#internship #design filter:links"; 
 var twitter_screen_name = "internbydesign"; 
 
 //
