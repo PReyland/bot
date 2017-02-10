@@ -11,8 +11,8 @@ Also: https://dev.twitter.com/rest/public/timelines
 */
 
 var since_id_current = 0;
-var search_query = "#internship OR internship filter:links"; 
-var twitter_screen_name = "ifindinternship"; 
+var search_query = "#internship AND design filter:links"; 
+var twitter_screen_name = "internbydesign"; 
 
 //
 // Get the most recent tweet id of the handle and assign to since_id_current
@@ -21,7 +21,7 @@ function find_since_id_current(handle) {
 	console.log("Finding since_id_current.");
 	var params = {
 		screen_name: handle,
-		count: 1 // get single tweet
+		count: 5 // get single tweet
 	}
 
 	T.get('statuses/user_timeline', params, cb);
